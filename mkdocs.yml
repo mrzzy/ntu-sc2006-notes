@@ -1,0 +1,18 @@
+#
+# NTU SC2006 Notes
+# Mkdocs Config
+#
+
+site_name: NTU SC2006 Notes
+site_description: NTU SC2006 Software Engineering Notes
+site_author: SC2006 Docs Team
+repo_url: https://github.com/mrzzy/ntu-sc2006-notes
+plugins:
+  - search
+  - with-pdf:
+      cover_subtitle: NTU SC2006 Software Engineering Notes
+      copyright: "&copy; SC2006 Docs Team"
+  - kroki:
+      FencePrefix: ""
+      FileTypeOverrides:
+        mermaid: png
