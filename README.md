@@ -17,24 +17,26 @@ Notes on NTU's SC2006 Software Engineering module.
    cd ntu-sc2006-notes
    ```
 
-2. Install dependencies:
+1. Install dependencies:
 
    ```bash
    pip install -r requirements.txt
    ```
 
-3. Start the local server:
+1. Start the local server:
 
    ```bash
    mkdocs serve
    ```
 
-4. Preview the notes at `http://127.0.0.1:8000/`.
+1. Preview the notes at `http://127.0.0.1:8000/`.
 
-5. Generate the site and export a PDF:
+1. Generate the site and export a PDF:
+
    ```bash
    mkdocs build
    ```
+
    The generated PDF is located at `site/pdf/document.pdf`.
 
 ## Project Structure
@@ -57,7 +59,7 @@ Contributions are welcome! Follow these steps to add or update notes:
 1. **Create a Markdown File:**
 
    - Place your file under the relevant folder in `docs/`.
-   - Add a `title` field in the YAML metadata at the top of the file.  
+   - Add a `title` field in the YAML metadata at the top of the file.\
      Example:
      ```yaml
      ---
@@ -65,7 +67,7 @@ Contributions are welcome! Follow these steps to add or update notes:
      ---
      ```
 
-2. **Organize by Folder:**
+1. **Organize by Folder:**
 
    - Group related topics and subtopics:
      ```
@@ -75,7 +77,18 @@ Contributions are welcome! Follow these steps to add or update notes:
              observer.md
      ```
 
-3. **Preview Locally:**
+1. **Run Formatting and Spelling Checks:**
+
+   - Format Markdown files using [`mdformat`](https://github.com/executablebooks/mdformat):
+     ```bash
+     mdformat .
+     ```
+   - Check for and fix common spelling errors using [`codespell`](https://github.com/codespell-project/codespell):
+     ```bash
+     codespell
+     ```
+
+1. **Preview Locally:**
 
    - Run `mkdocs serve` to ensure everything looks correct.
      > **Disable PDF Output (Optional):**
@@ -86,7 +99,8 @@ Contributions are welcome! Follow these steps to add or update notes:
      #     copyright: "&copy; SC2006 Docs Team"
      ```
 
-4. **Submit a Pull Request:**
+1. **Submit a Pull Request:**
+
    - Commit and push changes:
      ```bash
      git checkout -b add-notes
