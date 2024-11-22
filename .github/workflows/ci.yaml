@@ -1,0 +1,26 @@
+#
+# NTU SC2006 Notes
+# CI Pipeline
+#
+
+name: Lint & Build Notes
+
+on:
+  push: {}
+jobs:
+  lint:
+    name: Lint Notes
+    runs-on: ubuntu-22.04
+    steps:
+      - uses: actions/checkout@v3
+      - uses: actions/setup-python@v4
+        with:
+          python-version: 3.10.13
+          cache: "pip" # caching pip dependencies
+
+      - name: Install Pip Dependencies
+        run: |
+          pip install -r requirements.txt
+
+      - name: Run Lint Checks
+        run: make lint
