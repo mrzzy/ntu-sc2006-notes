@@ -56,7 +56,7 @@ Contributions are welcome! Follow these steps to add or update notes:
 
 ### Add a New Note
 
-6.  **Create a Markdown File:**
+06. **Create a Markdown File:**
 
     - Place your file under the relevant folder in `docs/`.
     - Add a `title` field in the YAML metadata at the top of the file.\
@@ -67,7 +67,7 @@ Contributions are welcome! Follow these steps to add or update notes:
       ---
       ```
 
-7.  **Organize by Folder:**
+07. **Organize by Folder:**
 
     - Group related topics and subtopics:
       ```
@@ -77,7 +77,7 @@ Contributions are welcome! Follow these steps to add or update notes:
               observer.md
       ```
 
-8.  **Run Formatting and Spelling Checks:**
+08. **Run Formatting and Spelling Checks:**
 
     - Format Markdown files using [`mdformat`](https://github.com/executablebooks/mdformat):
       ```bash
@@ -88,7 +88,7 @@ Contributions are welcome! Follow these steps to add or update notes:
       codespell
       ```
 
-9.  **Preview Locally:**
+09. **Preview Locally:**
 
     - Run `mkdocs serve` to ensure everything looks correct.
       > **Disable PDF Output (Optional):**
