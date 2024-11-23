@@ -2,12 +2,6 @@
 
 Notes on NTU's SC2006 Software Engineering module.
 
-## Features
-
-- **Dynamic Organization:** Notes are organized by folder structure and labeled with `title` metadata.
-- **Live Preview:** View and edit notes locally with `mkdocs serve`.
-- **PDF Export:** Build a static site and generate a PDF of the notes.
-
 ## PDF Download
 
 1. Navigate to [CI Workflow](https://github.com/mrzzy/ntu-sc2006-notes/actions/workflows/ci.yaml?query=branch%3Amain) & find the successful latest workflow run.
