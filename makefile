@@ -11,8 +11,8 @@ build:
 
 fmt:
 	codespell --write-changes
-	mdformat .
+	mdformat --number .
 
 lint:
 	codespell
-	mdformat --check .
+	mdformat --number --check .
