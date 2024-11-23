@@ -1,12 +1,9 @@
 # NTU SC2006 Software Engineering Notes
 
-Notes on NTU's SC2006 Software Engineering module.
+Notes on NTU's SC2006 Software Engineering module:
 
-## PDF Download
-
-1. Navigate to [CI Workflow](https://github.com/mrzzy/ntu-sc2006-notes/actions/workflows/ci.yaml?query=branch%3Amain) & find the successful latest workflow run.
-2. In the workflow run, locate the **"Artifacts"** section at the bottom of the run summary.
-3. Click on the artifact named `ntu-sc2006-notes-pdf` to download the generated PDF.
+- [PDF](https://mrzzy.github.io/ntu-sc2006-notes/pdf/document.pdf)
+- [HTML](https://mrzzy.github.io/ntu-sc2006-notes)
 
 ## Project Structure
 
