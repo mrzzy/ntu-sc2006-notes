@@ -1,36 +1,41 @@
-# Welcome to MkDocs
+# Software Engineering
 
-For full documentation visit [mkdocs.org](https://www.mkdocs.org).
+Software Engineering is the:
 
-## Commands
+> The production of **maintainable**, **fault-free** software that meets the user’s **requirements** and is delivered **on time** and **within budget**.
 
-- `mkdocs new [dir-name]` - Create a new project.
-- `mkdocs serve` - Start the live-reloading docs server.
-- `mkdocs build` - Build the documentation site.
-- `mkdocs -h` - Print help message and exit.
+**not** just coding.
 
-## Project layout
-
-```
-mkdocs.yml    # The configuration file.
-docs/
-    index.md  # The documentation homepage.
-    ...       # Other markdown pages, images and other files.
-```
-
-## Test PlantUML
-
-```plantuml
-@startuml
-Bob -> Alice : hello
-@enduml
-```
-
-## Test Mermaid
+# Software Development Activities
 
 ```mermaid
-graph LR
-    hello --> world
-    world --> again
-    again --> hello
+flowchart LR
+    s((Start)) --> r[Requirements]
+
+    r --> d[Design]
+    d --> i[Implementation]
+    i --> t[Testing]
+    t --> e
+
+    e((End))
 ```
+
+Software Engineering Activities & their deliverables:
+
+1. **Requirements** specify how the system should function
+    - Software Requirements Specification (SRS)
+    - Prototype
+2. **Design** System Design & review:
+    - Software Design Document
+    - Interface Design Document
+    - Test Cases
+    - Data Models
+3. **Implementation**
+    - Source Code
+    - Software
+    - Documentation: eg. User Manual
+4. **Testing** checking that the software conforms to requirements
+    - Test Report eg. User Acceptance test
+5. **Maintenance** evolving software to changing customer needs.
+    - Feature requests
+    - Bug Fixes
