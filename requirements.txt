@@ -37,6 +37,7 @@ pycparser==2.22
 pydyf==0.11.0
 pyphen==0.15.0
 python-dateutil==2.9.0.post0
+python-markdown-math==0.8
 PyYAML==6.0.2
 pyyaml_env_tag==0.1
 requests==2.32.3
