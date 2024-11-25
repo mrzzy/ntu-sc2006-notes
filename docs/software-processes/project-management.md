@@ -6,6 +6,8 @@ Manage [Software Engineering](../index.md) project to ensure **software delivery
 
 ```plantuml
 @startuml
+' scale down diagram to get it fit within a single a4 page
+scale 0.5
 [*] --> DefineBacklog
 
 state DefineBacklog {
