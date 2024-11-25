@@ -14,10 +14,15 @@ Model the structure of the system via UML [Class Diagram](#class-diagram):
 
 Model the implementation of the system via UML Diagrams:
 
-- [Sequence Diagram](#sequence-diagram): focused on **timing & order of interactions** between objects.
-- [Communication Diagram](#communication-diagram): Interactions between **objects**. Focused on objects.
-- [State Machine Diagram](#state-machine-diagram):
-- [Activity Diagram](#activity-diagram):
+- **Single** [Use Case](./elicitation.md#use-case)
+
+    - [Sequence Diagram](#sequence-diagram): focused on **timing & order of interactions** between objects.
+    - [Communication Diagram](#communication-diagram): Interactions between **objects**. Focused on objects.
+
+- **Multiple** Use Cases
+
+    - [State Machine Diagram](#state-machine-diagram):
+    - [Activity Diagram](#activity-diagram):
 
 # Class Diagram
 
@@ -195,3 +200,28 @@ Frames used in Sequence Diagram:
 - **alt** Alternative branch: if-else.
 - **opt** Optional branch: if.
 - **par** interactions run in parallel.
+
+# Communication Diagram
+
+```plantuml
+@startuml
+
+actor Actor as "User"
+boundary Reader as "Fingerprint Reader"
+control Authenticator
+entity Employee as "Employees"
+boundary Lock as "Door Lock"
+
+
+Actor - Reader: "1*: Press fingerprint\n<&arrow-right>"
+Reader - Reader: "2. Scan fingerprint\n<&arrow-right>"
+Reader -- Authenticator: "3: Validate biometrics\n<&arrow-down>"
+Authenticator - Employee: "4: Query Employee data\n<&arrow-right>"
+Authenticator -- Lock: "5[Successful authentication]: Unlock door\n<&arrow-down>"
+@enduml
+```
+
+Messages are performed in the **order** of sequence no.:
+
+- `*` **Iteration** indicates that the message may be performed **repeatedly**.
+- `[CONDITION]` **Guard** only executes message if `CONDITION` is true.

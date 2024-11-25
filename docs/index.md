@@ -23,8 +23,8 @@ flowchart LR
 Software Engineering Activities & their deliverables:
 
 1. **Requirements** specify how the system should function
-    - Software Requirements Specification (SRS)
-    - Prototype
+    - [Requirements Ellicitation](./requirements/elicitation.md): Software Requirements Specification (SRS)
+    - [Requirements Analysis](./requirements/analysis.md): Prototype System Design
 2. **Design** System Design & review:
     - Software Design Document
     - Interface Design Document

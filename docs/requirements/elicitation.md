@@ -18,6 +18,38 @@ as it identifies the **purpose** of the software system.
 
 # Software Requirements Specification (SRS)
 
+Software Requirements Specification (SRS) typically contains:
+
+1. Product Description
+
+    - Purpose of the System: [Mission Statement](#project-mission-statement)
+    - Scope of the System
+    - Users and Stakeholders
+    - Assumptions and Constraints
+
+2. Functional Requirements:
+
+    - [Use Case Model](#use-case-model)
+    - [Class Diagram](./analysis.md#class-diagram)
+    - [Sequence Diagram](./analysis.md#sequence-diagram)
+    - [Communication Diagram](./analysis.md#communication-diagram)
+    - Activity Diagram
+
+3. Non-Functional Requirements
+
+    - Availability
+    - Security
+    - Maintainability
+    - Portability
+
+4. Interface Requirements
+
+    - User: [UI Prototype](#ui-prototype)
+    - Hardware: hardware ports
+    - Software: API compatibility
+
+5. [Data Dictionary](#data-dictionary)
+
 ## Project Mission Statement
 
 Project Mission Statement defines the project in _2-3 sentences_:
@@ -39,6 +71,7 @@ Good Requirements are:
 - **Atomic** specify **only 1** requirement per requirement statement.
 - **Verifiable** clear **testable** goalpost to satisfy requirement.
 - **Unambiguious** interpretation of the requirement is not up to debate.
+    - use words `Shall`, `Must`, `Must Not`, `Is required to`, `Are applicable`, `Responsible for`, `Will`.
 - **Tracable** requirements can be cited by their requirement IDs back to the documents from which they where defined.
 
 # UI Prototype
