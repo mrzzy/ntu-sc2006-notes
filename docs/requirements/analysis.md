@@ -226,9 +226,9 @@ Messages are performed in the **order** of sequence no.:
 - `*` **Iteration** indicates that the message may be performed **repeatedly**.
 - `[CONDITION]` **Guard** only executes message if `CONDITION` is true.
 
-# State Diagram
+# State Machine Diagram
 
-State Diagram aka Dialog Map Models system **States** and transition **Events** between states.
+State Machine Diagram aka Dialog Map Models system **States** and transition **Events** between states.
 
 ```plantuml
 @startuml
