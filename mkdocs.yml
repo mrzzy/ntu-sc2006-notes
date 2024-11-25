@@ -7,6 +7,8 @@ site_name: NTU SC2006 Notes
 site_description: NTU SC2006 Software Engineering Notes
 site_author: SC2006 Docs Team
 repo_url: https://github.com/mrzzy/ntu-sc2006-notes
+markdown_extensions:
+  - markdown_katex
 plugins:
   - search
   - with-pdf:
@@ -16,7 +18,3 @@ plugins:
       FencePrefix: ""
       FileTypeOverrides:
         mermaid: png
-extra_javascript:
-  - https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.4/MathJax.js?config=TeX-AMS-MML_HTMLorMML
-markdown_extensions:
-  - mdx_math

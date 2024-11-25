@@ -75,11 +75,11 @@ Project Management method for [Iterative Software Processes](./introduction.md#a
 
 ## Velocity
 
-Velocity \\(V\\) is the **average** workload as [User Story](./agile.md#user-stories) Points \\(p_i\\) a development over $n$ no. of Sprints:
+Velocity $`V`$ is the **average** workload as [User Story](./agile.md#user-stories) Points $`p_i`$ a development over $`n`$ no. of Sprints:
 
-\\\[
-V = \\frac{\\sum^n_i p_i}{n}
-\\\]
+```math
+V = \frac{\sum^{n}_{i} p_i}{n}
+```
 
 ## Product Backlog
 
