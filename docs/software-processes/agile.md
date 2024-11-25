@@ -52,12 +52,34 @@ flowchart TD
 
 ## User Stories
 
-Customer involved in crafting requirements as User Stories:
+> **Format** As a ROLE,
+> I want to perform ACTION,
+> So that I gain BENEFIT.
 
-- **Card** size limit constraints the size of each User Story.
-- **Tasks** user story decomposed by development team into implementation tasks
-    - **Point** no. that gives a **workload** estimate for each task.
-- **Release Planning** customer choose which User Story to add to the next release.
+Software Requirements as User Stories:
+
+- **Epics** users stories are broken down from Epics (large feature).
+- **Card** size limit constraints the **scope** of each User Story.
+- **Conversation** include **background information** necessary to understand the User Story.
+- **Confirmation** include both functional & non-functional **Acceptance Criteria**
+
+### Acceptance Criteria
+
+Defines when the User Story is "done":
+
+- **Intent not Solution** criteria should define "what" that needs to be, not the "how".
+- **Implementation Independent** Developers should decide how to implement.
+- **High Level** Includes only detail **necessary** to define requirements.
+
+### Release Planning
+
+The Customer chooses which User Story to add to the next release.
+
+### User Story Tasks
+
+User Stories are further decomposed by development team into implementation tasks:
+
+- **Story Point** no. that gives a **workload** estimate for each task.
 
 ## Refactoring
 
