@@ -12,11 +12,22 @@ Software Development LifeCycle (SDLC) Activities performed in [Software Engineer
 Software Processes can be compared by their characteristics:
 
 - Plan Driven
-- Agile
+- Agile: Iterative. Build software in a **cycle of repeating steps**.
 - Incremental: build software in **small steps**
 
 > **Agile ≠ Incremental** eg. Development in rigid stages with small step
-> iterations within each stage is **incremental but not agile**.
+> increments within each stage is **incremental but not agile**.
+
+```mermaid
+---
+title: Incremental but not Agile
+---
+flowchart LR
+   r[Requirements Specification]
+   r -->|next increment| r
+   r --> d[Design & Implementation]
+   d -->|next increment| d
+```
 
 ### Plan Driven
 
