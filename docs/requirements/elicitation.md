@@ -74,6 +74,10 @@ Good Requirements are:
     - use words `Shall`, `Must`, `Must Not`, `Is required to`, `Are applicable`, `Responsible for`, `Will`.
 - **Tracable** requirements can be cited by their requirement IDs back to the documents from which they where defined.
 
+Example:
+
+> REQ-002: The system **shall** require users to enter a valid email address during account registration.
+
 # UI Prototype
 
 **UI Prototype** mock up to work out User Experience (UX) of the User Interface (UI)
