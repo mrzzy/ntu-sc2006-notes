@@ -1,13 +1,13 @@
 # Software Processes
 
-Software Development LifeCycle (SDLC) Activities performed in [Software Engineering](./index.md) **common** to all software processes:
+Software Development LifeCycle (SDLC) Activities performed in [Software Engineering](../index.md) **common** to all software processes:
 
-1. **Specification** [Requirements Ellicitation](./requirements/elicitation.md), [Requirements Analysis](./requirements/analysis.md)
+1. **Specification** [Requirements Ellicitation](../requirements/elicitation.md), [Requirements Analysis](../requirements/analysis.md)
 2. **Design & Implementation** System design & implementation
 3. **Validation** Testing
 4. **Evaluation** Maintenance
 
-# Comparing Software Processes
+## Plan Drive vs Agile vs Incremental
 
 Software Processes can be compared by their characteristics:
 
@@ -18,7 +18,7 @@ Software Processes can be compared by their characteristics:
 > **Agile ≠ Incremental** eg. Development in rigid stages with small step
 > iterations within each stage is **incremental but not agile**.
 
-## Plan Driven
+### Plan Driven
 
 ```mermaid
 flowchart
@@ -32,7 +32,7 @@ flowchart
 
 **Plan Driven** aka Waterfall **never returns** to previous SDLC Activity.
 
-## Agile
+### Agile
 
 ```mermaid
 flowchart
