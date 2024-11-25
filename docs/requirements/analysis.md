@@ -21,8 +21,8 @@ Model the implementation of the system via UML Diagrams:
 
 - **Multiple** Use Cases
 
-    - [State Machine Diagram](#state-machine-diagram):
-    - [Activity Diagram](#activity-diagram):
+    - [State Machine Diagram](#state-machine-diagram): visualise system as a set of [States](#state).
+    - [Activity Diagram](#activity-diagram): visualise system as a set of **workflow steps**.
 
 # Class Diagram
 
@@ -225,3 +225,128 @@ Messages are performed in the **order** of sequence no.:
 
 - `*` **Iteration** indicates that the message may be performed **repeatedly**.
 - `[CONDITION]` **Guard** only executes message if `CONDITION` is true.
+
+# State Diagram
+
+State Diagram aka Dialog Map Models system **States** and transition **Events** between states.
+
+```plantuml
+@startuml
+
+[*] --> OrderProcessing
+
+state OrderProcessing {
+
+    [*] --> NewOrder
+    NewOrder : entry/Log "New order received"
+    NewOrder : do/Validate order details
+    NewOrder : exit/Notify customer
+
+    NewOrder --> PaymentPending : PaymentInitiated()[paymentValid]/ProcessPayment
+    PaymentPending : entry/Set payment state to pending
+    PaymentPending : do/Wait for payment confirmation
+
+    state PaymentPending {
+        [*] --> AwaitingPayment
+        AwaitingPayment : do/Check for payment gateway response
+        AwaitingPayment --> PaymentConfirmed : PaymentSuccess()/Mark order as paid
+        AwaitingPayment --> PaymentFailed : PaymentFailure()[retriesLeft > 0]/Notify customer
+
+        PaymentConfirmed --> [*]
+        PaymentFailed : exit/Retry or cancel order
+        PaymentFailed --> [*]
+    }
+
+    PaymentPending --> Shipped : ShippingTriggered()[paymentConfirmed]/ScheduleShipping
+    Shipped : entry/Update shipping details
+    Shipped : do/Track shipment
+    Shipped : exit/Notify delivery team
+
+    Shipped --> Delivered : DeliveryConfirmed()/Close order
+    Delivered : entry/Update order to "delivered"
+
+    Delivered --> [*]
+}
+
+@enduml
+```
+
+- **Start** black filled circle is the starting state.
+- **End** outer line circle with inner black filled circle is end state.
+- **Nesting** States can be nested. eg. `AwaitingPayment` is nested in `PaymentPending`.
+
+## State
+
+```plantuml
+@startuml
+
+[*] --> State1
+State1 : entry/ACTION
+State1 : do/ACTION
+State1 : exit/ACTION
+
+@enduml
+```
+
+Actions performed in the State Lifecycle are specified in the body of the state:
+
+- `entry/ACTION` perform `ACTION` **once after** entering the state.
+- `do/ACTION` perform `ACTION` **repeatedly** while the state is active.
+- `exit/ACTION` perform `ACTION` **once before** exiting is active.
+
+## Event
+
+```
+EVENT(ARGS,....)[CONDITION]/ACTION
+```
+
+**Event** transitions format:
+
+- `EVENT` the name of the event that caused the state transition
+- `ARGS` arguments passed to the event handler. Can be **empty**.
+- `CONDITION` **Optional**. Only performs the transition if `CONDITION` is **true**.
+- `ACTION` **Optional**. Side effect action performed when transitioning.
+
+# Activity Diagram
+
+```plantuml
+@startuml
+start
+
+:Receive Order;
+
+if (Order Valid?) then (yes)
+  :Process Payment;
+  fork
+    :Send Confirmation Email;
+  fork again
+    :Prepare Order for Shipping;
+    :Generate Shipping Label;
+  end fork
+  if (Payment Success?) then (yes)
+    :Ship Order;
+  else (no)
+    :Notify Payment Failure;
+    stop
+  endif
+else (no)
+  :Notify Customer of Invalid Order;
+  stop
+endif
+
+:Track Shipment;
+
+if (Delivered?) then (yes)
+  :Send Delivery Confirmation Email;
+else (no)
+  :Retry Delivery or Escalate;
+endif
+
+stop
+@enduml
+```
+
+- **Start** black filled circle is the starting step.
+- **End** outer line circle with inner black filled circle is end step.
+- **Decision** Diamond shape indicates a **conditional** decision.
+- **Parallel** Solid liine indicates **parallel execution**.
