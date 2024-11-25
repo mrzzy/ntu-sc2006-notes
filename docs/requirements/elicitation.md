@@ -78,11 +78,11 @@ Example:
 
 > REQ-002: The system **shall** require users to enter a valid email address during account registration.
 
-# UI Prototype
+## UI Prototype
 
 **UI Prototype** mock up to work out User Experience (UX) of the User Interface (UI)
 
-# Data Dictionary
+## Data Dictionary
 
 **Data Dictionary** is a problem domain glossary that **unambiguiously** define terms so that they are not open for interpretation.
 
@@ -90,11 +90,11 @@ Example:
 
 Set of Diagrams for designing Software, **not** a programming language.
 
-- Class Diagram
-- Activity Diagram
-- Use Case Diagram
-- State Machine Diagram
-- Communication Diagram
+- [Class Diagram](./analysis.md#class-diagram)
+- [Activity Diagram](./analysis.md#activity-diagram)
+- [Use Case Diagram](#use-case-diagram)
+- [State Machine Diagram](./analysis.md#state-machine-diagram)
+- [Communication Diagram](./analysis.md#communication-diagram)
 
 # Use Case Model
 

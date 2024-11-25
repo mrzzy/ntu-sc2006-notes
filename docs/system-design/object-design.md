@@ -1,4 +1,5 @@
 # Object Design
+
 Object design: how to design Objects / Classes in [Class Diagram](../requirements/analysis.md#class-diagram)?
 
 - **Interface Specification** defining **boundaries** between components eg. operations, arguments, properties.
@@ -7,6 +8,7 @@ Object design: how to design Objects / Classes in [Class Diagram](../requirement
 - **Optimisation** improve speed or memory performance.
 
 # Design Patterns
+
 Existing **solution** to a **design problem**:
 
 - **Name** terminology used to talk about the design pattern.
@@ -15,13 +17,15 @@ Existing **solution** to a **design problem**:
 - **Consequences** trade offs in implementing the design pattern.
 
 ## Types of Design Patterns
+
 Design Patterns classified by the problem they solve:
 
 - **Creation Patterns**: how to **create** objects?
 - **Structural Patterns**: how to **compose** (combine) objects?
 - **Behavioural Patterns**: how to **implement** specific **behaviour** with objects?
 
-## Strategy Pattern
+# Strategy Pattern
+
 ```plantuml
 @startuml
 interface PaymentStrategy {
@@ -52,14 +56,15 @@ Strategy is **Behavioural Pattern**:
 - **Problem** a set of algorithms (eg. `CreditCardPayment`, `PayPalPayment`) should be **interchangeable** (eg. `PaymentStrategy`)
 - **Solution** implement algorithms behind a **common interface**.
 - **Consequences**
-    - **Pros**: 
+    - **Pros**:
         - **Encapsulation** hides implementation details.
-        - **Extensiblity** ie. code dependent on `PaymentStrategy` does **not need to change** 
+        - **Extensiblity** ie. code dependent on `PaymentStrategy` does **not need to change**
             to add a new `PaymentStrategy` implementation.
         - **Hot Swappable** Software behaviour change at runtime by swapping classes (eg. `CreditCardPayment` -> `PayPalPayment`).
     - **Cons**: Increases complexity.
 
-## Observer Pattern
+# Observer Pattern
+
 ```plantuml
 @startuml
 class WeatherStation {
@@ -110,7 +115,7 @@ WeatherStation -> WebDisplay : notify(temperature, humidity)
 
 Strategy is **Behavioural Pattern**:
 
-- **Problem** Broadcast: Update **&ge;1** observer objects when a subject object **changes** without polling.
+- **Problem** Broadcast: Update **≥1** observer objects when a subject object **changes** without polling.
 - **Solution**
     1. Observers (eg. `MobileDisplay`, `WebDisplay`) `register()` themselves with the Subject (`WeatherStation`)
     2. Subject calls `notify()` on Observers to notify them of changes.
@@ -121,7 +126,8 @@ Strategy is **Behavioural Pattern**:
     - **Performance** overhead.
     - **Complexity** increases code complexity.
 
-### Change Propagation
+## Change Propagation
+
 How changes are propagated from Subject to Observer:
 
 - **Pull Approach** changes "pulled" by observer via calling methods on the Subject (call back).
