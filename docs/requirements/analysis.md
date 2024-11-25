@@ -21,8 +21,8 @@ Model the implementation of the system via UML Diagrams:
 
 - **Multiple** Use Cases
 
-    - [State Machine Diagram](#state-machine-diagram): visualise system as a set of [States](#state).
-    - [Activity Diagram](#activity-diagram): visualise system as a set of **workflow steps**.
+    - [State Machine Diagram](#state-machine-diagram): visualise **single** system as a set of [States](#state).
+    - [Activity Diagram](#activity-diagram): visualise interactions **≥ 1** system(s) as a set of **workflow steps**.
 
 # Class Diagram
 
