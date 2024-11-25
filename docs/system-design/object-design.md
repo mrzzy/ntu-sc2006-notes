@@ -138,3 +138,96 @@ How changes are propagated from Subject to Observer:
     - **All Changes** same set of changes are pushed to all observers.
 - **Push + Pull** combines both approaches by having subject **push** minimal changes
     and the observer **pull** any additional changes that it requires.
+
+# Factory Pattern
+
+```plantuml
+@startuml
+interface Shape {
+  + draw() : void
+}
+
+class Circle extends Shape {
+  + draw() : void
+}
+
+class Rectangle extends Shape {
+  + draw() : void
+}
+
+class Square extends Shape {
+  + draw() : void
+}
+
+class ShapeFactory {
+  + createShape(type: String) : Shape
+}
+
+class App {
+}
+
+App --> ShapeFactory : <<uses>>
+App --> Shape : <<uses>>
+ShapeFactory --> Shape : <<creates>>
+@enduml
+```
+
+Factory is **Creational Pattern**
+
+- **Problem** How to encapulate & defer creation of an implementation (eg. `Circle`, `Square`) of interface (eg. `Shape`)?
+- **Solution** App uses Factory (eg. `ShapeFactory`) to create an implementation (eg. `Circle`) of the interface (eg. `Shape`).
+- **Pros**
+    - **Encapulation** hides creation logic.
+    - **Extensiblity** in creation logic, adding new implementations to interface.
+
+# Facade Pattern
+
+```plantuml
+@startuml
+class HomeTheaterFacade {
+  + watchMovie(movie: String) : void
+  + endMovie() : void
+}
+
+class Amplifier {
+  + on() : void
+  + setVolume(level: int) : void
+  + off() : void
+}
+
+class DVDPlayer {
+  + on() : void
+  + play(movie: String) : void
+  + stop() : void
+  + off() : void
+}
+
+class Projector {
+  + on() : void
+  + setInput(source: String) : void
+  + off() : void
+}
+
+class Client {
+  + main() : void
+}
+
+Client --> HomeTheaterFacade : <<uses>>
+HomeTheaterFacade --> Amplifier : <<controls>>
+HomeTheaterFacade --> DVDPlayer : <<controls>>
+HomeTheaterFacade --> Projector : <<controls>>
+@enduml
+```
+
+Facade is **Structural Pattern**
+
+- **Problem** How can **reduce** dependencies on **multiple** objects (eg. `Amplifier`, `DVDPlayer`, `Projector`)?
+- **Solution** Group interfaces into a single Facade (eg. `HomeTheaterFacade`) and depend on the Facade instead.
+- **Pros**
+    - **Ease of Use** code has to call 1 Facade instead of juggling multiple objects.
+    - **Reduces Dependencies** on multiple objects to 1 Facade.
+    - **Decoupling** code from multiple objects.
+- **Cons**
+    - **Extra Work** to replicate functionality behind Facade.
+    - **Complexity** due to indirection.
+    - **Performance** overhead.
