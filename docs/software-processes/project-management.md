@@ -83,6 +83,11 @@ Velocity $`V`$ is the **average** workload as [User Story](./agile.md#user-stori
 V = \frac{\sum^{n}_{i} p_i}{n}
 ```
 
+**Sprint Estimate** Velocity gives an estimate of workload that **may be completed** per sprint:
+
+- **Sprint Planning** useful for planning **workload allocation** of each sprint.
+- **Performance Metric** benchmark for Scrum team performance.
+
 ## Product Backlog
 
 Good Product Backlogs should be:
