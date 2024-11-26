@@ -25,7 +25,7 @@ Software Engineering Activities & their deliverables:
 1. **Requirements** specify how the system should function
     - [Requirements Ellicitation](./requirements/elicitation.md): Software Requirements Specification (SRS)
     - [Requirements Analysis](./requirements/analysis.md): Prototype System Design
-2. **Design** System Design & review:
+2. **[Design](./system-design/software-architecture.md)** System Design & review:
     - Software Design Document
     - Interface Design Document
     - Test Cases
@@ -34,8 +34,8 @@ Software Engineering Activities & their deliverables:
     - Source Code
     - Software
     - Documentation: eg. User Manual
-4. **Testing** checking that the software conforms to requirements
+4. **[Testing](./software-testing/introduction.md)** checking that the software conforms to requirements
     - Test Report eg. User Acceptance test
-5. **Maintenance** evolving software to changing customer needs.
+5. **[Maintenance](./software-maintenance.md)** evolving software to changing customer needs.
     - Feature requests
     - Bug Fixes
