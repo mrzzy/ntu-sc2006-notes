@@ -14,9 +14,10 @@ Equivalence Classes are sets of possible inputs with same **expected output**:
 - **Valid (Testing by Contract)** Test successful / happy path for **valid** inputs eg. Login successful.
     - **Multiple Valid Values** test multiple valid input values for each test case.
     - **Exhaustive** Optionally, if the valid input domain is small **all valid inputs** can be tested.
-- **Invalid (Defensive Testing)** Test unsuccessful path for **invalid** inputs eg. Bad login credentials.
+- **Invalid** Test unsuccessful path for **invalid** inputs eg. Bad login credentials.
     - **Single Invalid Value** test only 1 single input value (rest are valid inputs) for each test case
         to check code correctly rejects even with only 1 invalid input.
+- **Defensive Testing** testing both Valid + Invalid inputs.
 - **Exception** error case. eg. Unable to connect to Database.
 
 > **Numeric Equivalence Classes are Contiguous**\

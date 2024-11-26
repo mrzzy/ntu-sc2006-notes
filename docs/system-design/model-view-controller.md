@@ -10,7 +10,6 @@ interface View {
 
 interface Controller {
     + handleInput(action: String, params: Map<String, Object>) : void
-    + modifyModel(key: String, value: Object) : void
 }
 
 ' Define Classes
@@ -42,7 +41,7 @@ class AnonymousController implements Controller {
 
 Model ..> View : <<notifies>>
 Controller ..> Model : <<modifies>>
-View ..> Controller : <<delegates input>>
+View ..> Controller : <<handle input>>
 
 @enduml
 
