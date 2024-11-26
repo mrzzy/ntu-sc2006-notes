@@ -1,30 +1,55 @@
 # Model View Controller (MVC)
 
-```mermaid
-flowchart TD
-    %% Components
-    M[Model]
+```plantuml
+@startuml
+' Define Interfaces
+interface View {
+    + update(model: Model) : void
+    + render() : void
+}
 
-    subgraph V [View]
-        dark[Dark Mode]
-        light[Light Mode]
+interface Controller {
+    + handleInput(action: String, params: Map<String, Object>) : void
+    + modifyModel(key: String, value: Object) : void
+}
 
-    end
+' Define Classes
+class Model {
+    - data : Map<String, Object>
+    + getData() : Map<String, Object>
+    + setData(key: String, value: Object) : void
+    + addObserver(observer: View) : void
+    + notifyObservers() : void
+}
 
-    subgraph Controller
-        C[Anonymous Controller]
-        C_Alt[User Controller]
-    end
+class DarkModeView implements View {
+    + renderDarkTheme() : void
+}
 
-    %% Relationships
-    V -.->|Observes Changes| M
-    M -->|Notifies Changes| V
-    Controller -->|Make Changes| M
-    V -->|Handle Action| Controller
+class LightModeView implements View {
+    + renderLightTheme() : void
+}
+
+class UserController implements Controller {
+    + handleAuthAction(userId: String, action: String) : void
+}
+
+class AnonymousController implements Controller {
+    + handleAnonymousAction(action: String) : void
+}
+
+' Define Relationships
+
+Model ..> View : <<notifies>>
+Controller ..> Model : <<modifies>>
+View ..> Controller : <<delegates input>>
+
+@enduml
+
 ```
 
 [Software Architecture Style](./software-architecture.md#software-architecture-style) for user facing **interactive** systems
-that separates:
+that **separates**:
 
 - **Data (Model)** data structure & logic to manipulate data.
 - **Presentation (View & Controller)**
