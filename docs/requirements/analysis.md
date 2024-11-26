@@ -103,27 +103,38 @@ Access Modifier controls access to Attributes & Operations:
 | Private             | `-`        | Members are accessible only within the class.               |
 | Protected           | `#`        | Members are accessible within the class and its subclasses. |
 
-## Class Stereotypes
+# Class Stereotype Diagram
+
+```plantuml
+@startuml
+left to right direction
+boundary "FingerprintReader" <<boundary>> as FingerprintReader
+boundary "EntryGate" <<boundary>> as EntryGate
+control  "FacilityAccessSystem" <<control>> as FacilityAccessSystem
+entity "Employee" <<entity>> as Employee 
+
+
+FingerprintReader ~~> FacilityAccessSystem : <<verifies>>
+FacilityAccessSystem ~~> EntryGate : <<unlock>>
+FacilityAccessSystem ~~> Employee : <<queries>>
+@enduml
+```
+
+Class Diagram with **no details** (methods or attributes) visualising only:
+
+- **Interactions** between classes via `<<usage>>` dependency.
+
+- **Class Stereotype** of each class:
+
+    - **Boundary** interface between actor and system.
+    - **Control** app logic classes.
+    - **Entity** data model classes.
+
+# Sequence Diagram
 
 Visualises **timing and order** of interactions between objects:
 
 - **1 Use Case** = 1 Sequence Diagram
-
-```plantuml
-@startuml
-boundary boundary
-control control
-entity entity
-@enduml
-```
-
-Class Stereotypes:
-
-- **Boundary** interface between actor and system.
-- **Control** app logic classes.
-- **Entity** data model classes.
-
-# Sequence Diagram
 
 ```plantuml
 @startuml
