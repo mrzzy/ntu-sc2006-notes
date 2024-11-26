@@ -71,22 +71,22 @@ flowchart
 
 Waterfall performs SDLC Activities in a series of **rigid stages**:
 
-- **Pros** :thumbsup:
+- **Pros**
     - **Progress** clearily identifiable project progress.
     - **Documentation** up to date documentation.
     - **Large Systems**: suitable for building large systems with multiple components.
-- **Cons** :thumbsdown:
+- **Cons**
     - **No Return** once a stage is completed.
 
 ## Incremental
 
 Incremental **interweaves** SDLC activities:
 
-- **Pros** :thumbsup:
+- **Pros**
     - **Flexible** to changing requirements.
     - **Rapid Delivery** of incremental versions.
     - **Custom Feedback** can be obtained for each incremental version.
-- **Cons** :thumbsdown:
+- **Cons**
     - **Unclear Progress** No clearly defined project end.
     - **Poor System Design** Resulting from accommodating changing requirements over time.
         - Initial system design might **not be optimal** for **new requirements**.
@@ -96,10 +96,10 @@ Incremental **interweaves** SDLC activities:
 
 Integration of **externally sourced reusable components** by **configuring** them to work together as a single software system:
 
-- **Pros** :thumbsup:
+- **Pros**
     - **Lower Development Cost** since we can reuse instead of paying developers to write our own.
     - **Faster Delivery** since we don't have to spend time to write our own.
-- **Cons** :thumbsdown:
+- **Cons**
     - **Gaps in Requirements** components may not satisfy all requirements.
     - **Lack of Control** over reused components project direction.
     - **Limited Support** for reused components.
