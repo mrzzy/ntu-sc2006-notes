@@ -13,7 +13,7 @@ Software Architecture / System Design is needed for:
 - **Larger Software** Lowering **complexity** in larger software systems by organising components.
 - **Costs & Schedule** Correcting **bad System Design** gets progressively **more costly** as development progresses and might **delay** timely software release.
 
-## Software Architecture Diagram
+# Software Architecture Diagram
 
 ```plantuml
 @startuml
@@ -47,11 +47,11 @@ User --> DB : "Fetch user data"
 - **Abstract** obmits **unnecessary** details.
 - **Purposeful** focused on **structure & interactions** of components.
 
-## Software Architecture Style
+# Software Architecture Style
 
 **Pattern** (well known solution) of organising components in Software Architecture Designk
 
-## Layered Architecture
+# Layered Architecture
 
 ```mermaid
 graph TD

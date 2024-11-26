@@ -150,14 +150,18 @@ Testing all **basis paths** aka linearly independent paths in the [Control Flow 
 > **Non Unique** Set of basis paths is **not unique**, depends on initial baseline path chosen.
 
 1. Build CFG from code of System Under Test.
+
 2. Compute Cyclometric Complexity (CC) to determine no. of **basis paths** to test.
 
-   > Not all basis paths identified by CC are **feasible** (reachable) in code.
-   > Such basis paths are **impossible** to test.
+    > Not all basis paths identified by CC are **feasible** (reachable) in code.
+    > Such basis paths are **impossible** to test.
 
 3. Choose a **baseline path** consisting of **false branches** choices for each decision point.
+
 4. Switch **branch** of 1 decision point to create an **alternative path**.
+
 5. Repeat step 4 for all other decision points to obtain **basis paths (Baseline + Alternative Paths)**.
+
 6. Craft **test inputs** to test all identified basis paths.
 
 > **Loops** Considerations when dealing with loops:

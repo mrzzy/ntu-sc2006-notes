@@ -20,10 +20,10 @@ Testing: checking software system for **known bugs**:
 Types of Software Testing:
 
 - **Black Box** testing done **without** knowledge of code implementation (requirements only).
-  - [Equivalence Class Testing](#equivalence-class-testing)
-  - [Boundary Value Testing](#boundary-value-testing)
+    - [Equivalence Class Testing](#equivalence-class-testing)
+    - [Boundary Value Testing](#boundary-value-testing)
 - **White Box** testing done **with** knowledge of code implementation (code + requirements).
-  - [Control Flow Testing](#control-flow-testing)
+    - [Control Flow Testing](#control-flow-testing)
 
 | Testing       | Test Complexity | Test Thoroughness | Test Coverage |
 | ------------- | --------------- | ----------------- | ------------- |
@@ -60,4 +60,3 @@ Order of running Test Cases:
 | ---------------- | --------------- | ------------------ |
 | **Cascading**    | Lower           | No                 |
 | **Independent**  | Higher          | Yes                |
-
