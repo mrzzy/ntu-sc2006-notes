@@ -179,7 +179,7 @@ CC computes the total no. of **basis paths** in a CFG:
 \text{CC} = |E| + |V| + 2
 ```
 
-- Method A: $`D`$ No. of **binary decision points** in CFG:
+- Method B: $`D`$ No. of **binary decision points** in CFG:
 
 ```math
 \text{CC} = D + 1
