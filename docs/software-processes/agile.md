@@ -20,7 +20,7 @@
 
 ## Agile Principles
 
-- **Customer Involvement** throughout the development process to confirm requirements & give feedbac.
+- **Customer Involvement** throughout the development process to confirm requirements & give feedback.
 - **Incremental Delivery** of software via releasing incremental versions.
 - **People Not Process** development team should be allowed to follow their **own workflow** rather than a strict process.
 - **Embrance Change** system design should be **extensive** since we expect changing requirements.
