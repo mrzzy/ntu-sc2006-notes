@@ -116,7 +116,7 @@ Test Coverage Levels:
 | **Level 3** | 100% **basis path** coverage | Every **linearly independent path** is tested |
 | **Level 4** | 100% **path** coverage       | Every **path** is tested                      |
 
-## Total No. of Paths
+# Total No. of Paths
 
 Total No. of Paths $`P`$ tested in **Level 4**: 100% **path** coverage testing:
 
@@ -169,7 +169,7 @@ Testing all **basis paths** aka linearly independent paths in the [Control Flow 
 > - **No Iteration** skip the loop cycle entirely.
 > - **1 Iteration** perform 1 iteration of loop cycle and then exit the loop cycle.
 
-## Cyclometric Complexity (CC)
+# Cyclometric Complexity (CC)
 
 CC computes the total no. of **basis paths** in a CFG:
 
