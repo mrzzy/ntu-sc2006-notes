@@ -7,6 +7,24 @@ site_name: NTU SC2006 Notes
 site_description: NTU SC2006 Software Engineering Notes
 site_author: SC2006 Docs Team
 repo_url: https://github.com/mrzzy/ntu-sc2006-notes
+nav:
+  - Introduction: index.md
+  - Requirements:
+    - Requirement Elicitation: requirements/elicitation.md
+    - Requirement Analysis: requirements/analysis.md
+  - Software Processes:
+    - Introduction: software-processes/introduction.md
+    - Agile: software-processes/agile.md
+    - Project Management: software-processes/project-management.md
+  - Software Testing:
+    - Introduction: software-testing/introduction.md
+    - Control Flow: software-testing/control-flow.md
+    - Equivalence Class: software-testing/equivalence-class.md
+  - System Design:
+    - Software Architecture: system-design/software-architecture.md
+    - Object Design: system-design/object-design.md
+    - Model View Controller: system-design/model-view-controller.md
+  - Software Maintenance: software-maintenance.md
 markdown_extensions:
   - markdown_katex
 plugins:
