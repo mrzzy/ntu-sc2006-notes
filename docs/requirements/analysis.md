@@ -119,7 +119,7 @@ entity entity
 
 Class Stereotypes:
 
-- **Boundary** `<<boundary>>` interface between actor and system.
+- **Boundary** interface between actor and system.
 - **Control** app logic classes.
 - **Entity** data model classes.
 
