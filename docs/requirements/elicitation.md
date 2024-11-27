@@ -115,17 +115,30 @@ Use Case:
 ```plantuml
 @startuml
 left to right direction
+
+' Generalized actor relationship
+actor "Customer" as customer
 actor "Food Critic" as fc
+fc -|> customer
+note top of fc : Food Critic is a specialized\nactor inheriting all use cases\nof Customer.
+
 rectangle Restaurant {
   usecase "Eat Food" as UC1
-  (UC1) .> (UC2): <<include>>
-  (UC3) ..> (UC1): <<extends>>
   usecase "Pay for Food" as UC2
   usecase "Drink" as UC3
+
+  ' Relationships between use cases
+  (UC1) .> (UC2): <<include>>
+  (UC3) ..> (UC1): <<extends>>
 }
-fc -- UC1
-fc -- UC2
+
+' Customer relationships
+customer -- UC1
+customer -- UC2
+
+' Food Critic inherits and can perform additional interactions
 fc -- UC3
+
 @enduml
 ```
 
