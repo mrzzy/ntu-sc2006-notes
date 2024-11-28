@@ -46,7 +46,7 @@ six==1.16.0
 soupsieve==2.6
 tinycss2==1.4.0
 tinyhtml5==2.0.0
-tomli==2.1.0
+tomli==2.2.1
 uc-micro-py==1.0.3
 urllib3==2.2.3
 watchdog==6.0.0
