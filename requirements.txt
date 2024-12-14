@@ -18,7 +18,7 @@ markdown-it-py==3.0.0
 markdown-katex==202406.1035
 MarkupSafe==3.0.2
 mdformat==0.7.19
-mdformat-gfm==0.3.7
+mdformat-gfm==0.4.1
 mdformat_admon==2.0.6
 mdformat_mkdocs==3.1.1
 mdformat_tables==1.0.0
