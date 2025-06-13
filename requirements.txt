@@ -40,7 +40,7 @@ pyphen==0.15.0
 python-dateutil==2.9.0.post0
 PyYAML==6.0.2
 pyyaml_env_tag==0.1
-requests==2.32.3
+requests==2.32.4
 result==0.17.0
 six==1.16.0
 soupsieve==2.6
